@@ -13,7 +13,7 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: container-query-polyfill
+          package-name: shadow-container-query-polyfill
 
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
