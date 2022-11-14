@@ -81,7 +81,7 @@ const SAFARI_IOS_DEFINITION: BrowserDefinition = {
   logo: 'https://unpkg.com/@browser-logos/safari-ios@1.0.15/safari-ios.svg',
   versions: (
     [
-      ['13.7', '13.7'],
+      // ['13.1', '13.7'],
       ['14.0', '14'],
       ['14.1', '14'],
       ['15.0', '15'],
@@ -231,8 +231,8 @@ async function getTests(manifestPath: string): Promise<TestSuite> {
   const manifest = JSON.parse(manifestBuffer.toString());
 
   const prefix = `css/css-contain/container-queries`;
-  const htmlTests =
-    manifest.items.testharness.css['css-contain']['container-queries'];
+  const htmlTests = ['container-for-shadow-dom.html'];
+    // manifest.items.testharness.css['css-contain']['container-queries']['container-for-shadow-dom.html'];
   // const refTests =
   //   manifest.items.reftest.css['css-contain']['container-queries'];
 
@@ -247,7 +247,7 @@ async function getTests(manifestPath: string): Promise<TestSuite> {
 
   return {
     js: Object.keys(htmlTests).map(
-      name => `http://web-platform.test:8000/${prefix}/${name}`
+      name => `http://web-platform.test:8000/${prefix}/${htmlTests[Number.parseInt(name)]}`
     ),
     iframe,
   };
