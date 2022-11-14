@@ -412,14 +412,16 @@ export function initializePolyfill(updateCallback: () => void) {
           computeFlag(state),
         ]);
       }
-      for (const adoptedStyleSheet of node.adoptedStyleSheets) {
+      const adoptedStyleSheets = node?.adoptedStyleSheets ?? [];
+      for (const adoptedStyleSheet of adoptedStyleSheets) {
         if (adoptedStyleSheet) {
           for (const query of getDescriptorsForStyleSheet(adoptedStyleSheet)) {
             pushReference(query);
           }
         }
       }
-      for (const styleSheet of node.styleSheets) {
+      const styleSheets = node?.styleSheets ?? [];
+      for (const styleSheet of styleSheets) {
         if (styleSheet) {
           for (const query of getDescriptorsForStyleSheet(styleSheet)) {
             pushReference(query);
