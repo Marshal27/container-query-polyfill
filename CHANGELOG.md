@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.1...v1.1.2) (2022-11-14)
+
+
+### Bug Fixes
+
+* null check styleSheets before constructing shadow state ([9240bd3](https://github.com/Marshal27/shadow-container-query-polyfill/commit/9240bd3f97b8a4faf4fa88d5fbd9048b54ed1cd8))
+
 ## [1.1.1](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.0...v1.1.1) (2022-11-13)
 
 
