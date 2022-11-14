@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.0...v1.1.1) (2022-11-14)
+
+
+### Bug Fixes
+
+* compute QueryContainerFlag using shadowRoot parentState ([e6522a9](https://github.com/Marshal27/shadow-container-query-polyfill/commit/e6522a98eaf94ca671c2d3ad9865b7ca71aa5971))
+* null check styleSheets before constructing shadow state ([9240bd3](https://github.com/Marshal27/shadow-container-query-polyfill/commit/9240bd3f97b8a4faf4fa88d5fbd9048b54ed1cd8))
+
 ## [1.1.1](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.0...v1.1.1) (2022-11-13)
 
 
