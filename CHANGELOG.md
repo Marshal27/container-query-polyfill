@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.2...v1.1.3) (2022-11-22)
+
+
+### Bug Fixes
+
+* add esm format ([0150304](https://github.com/Marshal27/shadow-container-query-polyfill/commit/01503047437eb109a39fec5694c978cc85e0f2f5))
+
 ## [1.1.2](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.1...v1.1.2) (2022-11-14)
 
 
