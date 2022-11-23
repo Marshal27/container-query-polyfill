@@ -7,13 +7,13 @@
     "url": "https://github.com/Marshal27/shadow-container-query-polyfill"
   },
   "type": "module",
-  "module": "dist/shadow-container-query-polyfill.modern.js",
+  "module": "dist/shadow-container-query-polyfill.module.js",
   "unpkg": "dist/shadow-container-query-polyfill.modern.js",
   "publishConfig": {
     "source": "src/index.ts"
   },
   "exports": {
-    "default": "./dist/shadow-container-query-polyfill.modern.js"
+    "default": "./dist/shadow-container-query-polyfill.module.js"
   },
   "files": [
     "README.md",
