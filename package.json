@@ -7,24 +7,24 @@
     "url": "https://github.com/Marshal27/shadow-container-query-polyfill"
   },
   "type": "module",
-  "module": "dist/shadow-container-query-polyfill.modern.js",
-  "unpkg": "dist/shadow-container-query-polyfill.modern.js",
+  "module": "dist/shadow-container-query-polyfill.modern.mjs",
+  "unpkg": "dist/shadow-container-query-polyfill.modern.mjs",
   "publishConfig": {
     "source": "src/index.ts"
   },
   "exports": {
-    "default": "./dist/shadow-container-query-polyfill.modern.js"
+    "default": "./dist/shadow-container-query-polyfill.modern.mjs"
   },
   "files": [
     "README.md",
     "LICENSE",
-    "dist/*.js",
+    "dist/*.mjs",
     "package.json"
   ],
   "scripts": {
     "build:clean": "rimraf ./dist/",
     "build:wpt": "microbundle -f modern --no-compress --define PACKAGE_VERSION=${npm_package_version},IS_WPT_BUILD=1",
-    "build": "microbundle -f modern,esm --no-sourcemap --define PACKAGE_VERSION=${npm_package_version},IS_WPT_BUILD=0",
+    "build": "microbundle -f modern --no-sourcemap --define PACKAGE_VERSION=${npm_package_version},IS_WPT_BUILD=0",
     "lint": "eslint '**/*.ts'",
     "prettier:fix": "prettier --write .",
     "serve": "superstatic -p 9606 .",
