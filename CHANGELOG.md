@@ -1,5 +1,6 @@
 # Changelog
 
+
 ## [1.1.3](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.2...v1.1.3) (2022-11-22)
 
 
