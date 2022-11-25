@@ -1,6 +1,23 @@
 # Changelog
 
 
+## [1.2.0](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.4...v1.2.0) (2022-11-25)
+
+
+### Features
+
+* Shadow DOM ([c16a7ce](https://github.com/Marshal27/shadow-container-query-polyfill/commit/c16a7ce1016e64f66e8538e1dbe8c142db9aab7c))
+
+
+### Bug Fixes
+
+* add esm format ([0150304](https://github.com/Marshal27/shadow-container-query-polyfill/commit/01503047437eb109a39fec5694c978cc85e0f2f5))
+* compute QueryContainerFlag using shadowRoot parentState ([e6522a9](https://github.com/Marshal27/shadow-container-query-polyfill/commit/e6522a98eaf94ca671c2d3ad9865b7ca71aa5971))
+* improve :where supports check ([#65](https://github.com/Marshal27/shadow-container-query-polyfill/issues/65)) ([1dab190](https://github.com/Marshal27/shadow-container-query-polyfill/commit/1dab190dbd640f2ad1a1535c69a7143182729cee)), closes [#64](https://github.com/Marshal27/shadow-container-query-polyfill/issues/64)
+* Improve performance on lower end devices ([48dfef8](https://github.com/Marshal27/shadow-container-query-polyfill/commit/48dfef88f8eb037cd38ad8d43410950694504497))
+* null check styleSheets before constructing shadow state ([9240bd3](https://github.com/Marshal27/shadow-container-query-polyfill/commit/9240bd3f97b8a4faf4fa88d5fbd9048b54ed1cd8))
+* remove esm output and convert modern output to mjs extension ([88e936d](https://github.com/Marshal27/shadow-container-query-polyfill/commit/88e936d6f0fae8e67c2da2684e8555fd8190540c))
+
 ## [1.1.4](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.3...v1.1.4) (2022-11-24)
 
 
