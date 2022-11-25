@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.1.4](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.3...v1.1.4) (2022-11-25)
+
+
+### Bug Fixes
+
+* remove esm output and convert modern output to mjs extension ([64b12fa](https://github.com/Marshal27/shadow-container-query-polyfill/commit/64b12fa4234d1062ccea91a4ad3dd53adcd8f22b))
+
 ## [1.1.3](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.2...v1.1.3) (2022-11-22)
 
 
