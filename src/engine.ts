@@ -766,6 +766,11 @@ class ShadowRootController extends NodeController<ShadowRoot> {
   }
 
   connected(): void {
+    window.onload = () => {
+      const styleElement = document.createElement("style");
+      styleElement.textContent = `* { ${CUSTOM_PROPERTY_TYPE}: inherit; ${CUSTOM_PROPERTY_NAME}: inherit; }`;
+      this.node.appendChild(styleElement);
+    }
     this.mo?.observe(this.node, {
       childList: true,
       subtree: true,
