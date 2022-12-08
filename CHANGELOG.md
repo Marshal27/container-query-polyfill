@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.1.6](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.5...v1.1.6) (2022-12-08)
+
+
+### Bug Fixes
+
+* Inherit_Container_Type_and_Name_from_Cascading_Stylesheet ([c93fabe](https://github.com/Marshal27/shadow-container-query-polyfill/commit/c93fabe4a621fc999a5070d1f41d0b1e8ca4e5cf))
+
 ## [1.1.5](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.3...v1.1.5) (2022-11-25)
 
 
