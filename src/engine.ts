@@ -756,6 +756,8 @@ class StyleElementController extends NodeController<HTMLStyleElement> {
   }
 }
 
+const shadowOnLoadCallbacks: (() => void)[] = [];
+let isOnLoadSet = false;
 class ShadowRootController extends NodeController<ShadowRoot> {
   private controller: AbortController | null = null;
   private mo: MutationObserver;
@@ -763,14 +765,24 @@ class ShadowRootController extends NodeController<ShadowRoot> {
   constructor(node: ShadowRoot, mo: MutationObserver) {
     super(node);
     this.mo = mo;
+    if (!isOnLoadSet) {
+      window.onload = () => {
+        for (const func of shadowOnLoadCallbacks) {
+          func();
+        }
+      }
+      isOnLoadSet = true;
+    }
   }
 
   connected(): void {
-    window.onload = () => {
-      const styleElement = document.createElement("style");
-      styleElement.textContent = `* { ${CUSTOM_PROPERTY_TYPE}: inherit; ${CUSTOM_PROPERTY_NAME}: inherit; }`;
-      this.node.appendChild(styleElement);
-    }
+    shadowOnLoadCallbacks.push(
+      () => {
+        const styleElement = document.createElement("style");
+        styleElement.textContent = `* { ${CUSTOM_PROPERTY_TYPE}: inherit; ${CUSTOM_PROPERTY_NAME}: inherit; }`;
+        this.node.appendChild(styleElement);
+      }
+    )
     this.mo?.observe(this.node, {
       childList: true,
       subtree: true,
