@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.1.7](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.6...v1.1.7) (2023-01-05)
+
+
+### Bug Fixes
+
+* window onload overwrite ([99cb96e](https://github.com/Marshal27/shadow-container-query-polyfill/commit/99cb96e1305577b1b35ba6a7b70fe6131b74ccdf))
+
 ## [1.1.6](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.5...v1.1.6) (2022-12-08)
 
 
