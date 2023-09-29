@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.1.8](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.7...v1.1.8) (2023-09-29)
+
+
+### Bug Fixes
+
+* Avoid ResizeObserver loop limit exceeded. ([6132cde](https://github.com/Marshal27/shadow-container-query-polyfill/commit/6132cde37406bd5ef4c93cd2b2131b1cbe67d63d)), closes [#40](https://github.com/Marshal27/shadow-container-query-polyfill/issues/40)
+
 ## [1.1.7](https://github.com/Marshal27/shadow-container-query-polyfill/compare/v1.1.6...v1.1.7) (2023-01-05)
 
 
