@@ -257,13 +257,25 @@ export function initializePolyfill(updateCallback: () => void) {
   // TODO: implement monkeypatch for CSSStyleSheet.prototype.insertRule and CSSStyleSheet.prototype.deleteRule
   // as they currently are not handled.
 
-  const resizeObserver = new ResizeObserver(entries => {
-    for (const entry of entries) {
-      const instance = getOrCreateInstance(entry.target);
-      instance.resize();
+  let animationFrameId: number;
+
+  const originalUnobserve = ResizeObserver.prototype.unobserve;
+  ResizeObserver.prototype.unobserve = function (target: Element) {
+    if (animationFrameId) {
+      window.cancelAnimationFrame(animationFrameId);
     }
-    getOrCreateInstance(documentElement).update(computeRootState());
-    updateCallback();
+    return originalUnobserve.apply(this, [target]);
+  }
+
+  const resizeObserver = new ResizeObserver(entries => {
+    animationFrameId = window.requestAnimationFrame(() => {
+      for (const entry of entries) {
+        const instance = getOrCreateInstance(entry.target);
+        instance.resize();
+      }
+      getOrCreateInstance(documentElement).update(computeRootState());
+      updateCallback();
+    });
   });
 
   const rootController = new NodeController(documentElement);

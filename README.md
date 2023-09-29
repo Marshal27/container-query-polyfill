@@ -130,10 +130,6 @@ The polyfill uses the CSS [`:where()`](https://developer.mozilla.org/en-US/docs/
 
 This is to ensure the specificity of your rules never changes (e.g. while the polyfill is loading, or on browsers with native support for container queries). On browsers without `:where()` supports, rules without the dummy will be ignored.
 
-## ResizeObserver Loop Errors
-
-When using the polyfill, you may observe reports of errors like `ResizeObserver loop completed with undelivered notifications` or `ResizeObserver loop limit exceeded`. These are expected, and may safely be ignored.
-
 ## License
 
 [Apache 2.0](LICENSE)
